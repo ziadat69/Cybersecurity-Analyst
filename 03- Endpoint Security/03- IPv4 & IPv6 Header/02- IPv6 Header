@@ -1,0 +1,106 @@
+---
+
+### 1. Version:
+- Definition: Gibt die Version des IP-Protokolls an.
+- Wert in IPv6: Der Wert ist **6**.
+
+  Praktisches Beispiel:
+  Wenn du eine Verbindung zu einem Server im Internet herstellst,
+zeigt der **Version**-Wert im IPv6-Header an, dass es sich um IPv6 handelt, also Version 6 des Internetprotokolls.
+
+---
+
+### 2. Traffic Class:
+- Definition: Dient zur Priorisierung von Datenpaketen, 
+              ähnlich dem **Type of Service** in IPv4. Es enthält Informationen zur Differenzierung des Verkehrs und der 
+              Qualität des Dienstes.
+  
+  **Praktisches Beispiel**:
+  Wenn du ein Online-Spiel spielst, wird das **Traffic Class**-Feld so gesetzt,
+  dass deine Spielpakete Vorrang haben und eine schnellere Übertragung erhalten als weniger zeitkritische Daten, 
+  wie etwa eine E-Mail.
+
+---
+
+### 3. **Flow Label**:
+- Definition: Wird verwendet, um Datenströme zu kennzeichnen und zu ermöglichen, 
+dass Pakete desselben Stroms bevorzugt behandelt werden. Es hilft, Traffic effizient zu steuern,
+insbesondere für Echtzeitanwendungen.
+  
+  Praktisches Beispiel:
+  Bei einem Video-Streaming-Dienst könnte das **Flow Label** dafür sorgen,
+  dass alle Pakete des gleichen Video-Streams in einer bevorzugten Reihenfolge und ohne Verzögerung verarbeitet werden.
+
+---
+
+### 4. Payload Length:
+- Definition: Gibt die Länge der Nutzdaten (ohne Header) im Paket an.
+- Wert in IPv6: Der Wert kann bis zu **65.535** Bytes betragen, 
+                da die **Total Length** aus IPv4 hier nicht mehr vorhanden ist.
+
+  Praktisches Beispiel:
+  Wenn du ein großes Dokument verschickst, gibt das **Payload Length**-Feld die Länge der tatsächlichen Daten 
+  (z. B. des Textes oder der Bilder) im Paket an, sodass der Empfänger weiß, wie viel Nutzdaten er erwartet.
+
+---
+
+### 5. Next Header:
+- **Definition**: Gibt das Protokoll an, das direkt im Payload des Pakets verwendet wird 
+                  (z. B. **TCP**, **UDP**, oder ein weiteres Protokoll wie **ICMPv6**).
+  
+  Praktisches Beispiel:
+  Wenn du eine Webseite aufrufst, könnte das **Next Header**-Feld den Wert **TCP** enthalten, 
+  was bedeutet, dass das TCP-Protokoll verwendet wird, um die Nutzdaten zu übertragen.
+
+---
+
+### 6. Hop Limit:
+- Definition: Gibt die maximale Anzahl von Routern an, die das Paket durchlaufen darf, bevor es verworfen wird. Entspricht dem **TTL**-Feld in IPv4.
+- Wert in IPv6: Der Wert liegt häufig bei **64** oder **128**.
+
+  Praktisches Beispiel:
+  Wenn du eine Anfrage an einen Webserver sendest, 
+  könnte das **Hop Limit**-Feld auf **64** gesetzt sein. Das bedeutet, 
+  dass das Paket maximal 64 Router durchlaufen kann, bevor es verworfen wird, falls es das Ziel nicht erreicht.
+
+---
+
+### 7. **Source Address**:
+- **Definition**: Die **IPv6-Adresse** des sendenden Geräts.
+  
+  Praktisches Beispiel:
+  Wenn du von deinem Computer eine Nachricht an einen Freund sendest, 
+  wird das **Source Address**-Feld die IPv6-Adresse deines Computers angeben, 
+  sodass der Empfänger weiß, von welchem Gerät die Nachricht kommt.
+
+---
+
+### 8. **Destination Address**:
+- **Definition**: Die **IPv6-Adresse** des empfangenden Geräts.
+  
+  Praktisches Beispiel:
+  Wenn du eine Nachricht an deinen Freund sendest, 
+  enthält das **Destination Address**-Feld die IPv6-Adresse seines Geräts. 
+  Diese Information hilft Routern, das Paket an das richtige Ziel weiterzuleiten.
+
+---
+
+### **Zusatzfelder (Optionale Header)**:
+Im IPv6-Header gibt es auch optionale Header, die nach dem Hauptheader eingefügt werden können. Diese sind nicht Teil des grundlegenden Headers, sondern bieten erweiterte Funktionen wie Routing-Informationen oder Sicherheit:
+
+- Routing Header: Wird verwendet, um anzugeben, wie das Paket durch das Netzwerk weitergeleitet werden soll, basierend auf einer vorgegebenen Route.
+  
+  Praktisches Beispiel:
+  Wenn du ein Paket von deinem Gerät über mehrere feste Stationen leiten möchtest, gibt der **Routing Header** an,
+  wie das Paket weiterzuleiten ist, um den gewünschten Pfad zu nehmen.
+
+- Fragment Header: Im Gegensatz zu IPv4, wo das Fragmentieren im Header selbst gesteuert wird, 
+  wird in IPv6 das Fragmentieren durch einen speziellen Header abgewickelt, der optional ist.
+  
+  Praktisches Beispiel:
+  Wenn ein großes Paket in kleinere Teile fragmentiert werden muss, 
+wird der **Fragment Header** verwendet, um sicherzustellen, dass alle Teile korrekt zusammengesetzt werden, 
+wenn sie das Ziel erreichen.
+
+
+
