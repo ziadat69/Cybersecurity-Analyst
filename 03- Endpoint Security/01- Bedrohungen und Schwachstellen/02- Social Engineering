@@ -1,0 +1,109 @@
+
+#### 1. Was ist Social Engineering?**  
+
+- Eine psychologische Manipulationsmethode, die Menschen dazu bringt, vertrauliche Informationen preiszugeben oder sicherheitskritische Aktionen auszuführen.  
+- Angreifer umgehen technische Schutzmaßnahmen, indem sie auf menschliche Schwächen wie Vertrauen, Angst oder Stress setzen.  
+
+---
+
+### 2. Taktiken und Angriffsarten**  
+
+
+#### A) Direkte Täuschung & Manipulation**  
+
+✅ Pretexting (Vorwand-Methode)**  
+- Angreifer gibt sich als vertrauenswürdige Person aus (z. B. IT-Support, Bankmitarbeiter, Polizei).  
+- Beispiel: Hacker ruft an und gibt sich als Techniker aus, um ein „Sicherheitsproblem“ zu beheben, während das Opfer seine Zugangsdaten verrät.  
+
+
+✅ Quid Pro Quo (Gegenleistung-Betrug)**  
+- Täuscher bietet etwas im Austausch für sensible Informationen.  
+- Beispiel: Kostenloses WLAN im Café – Nutzer verbinden sich und geben unbewusst ihre Daten an einen Angreifer weiter.  
+
+
+✅ Identitätsbetrug (Identity Fraud)**  
+- Nutzung gestohlener Identitäten für betrügerische Zwecke.  
+- Beispiel: Kriminelle kaufen gestohlene Login-Daten aus dem Darknet, um Online-Banking-Konten leerzuräumen.  
+
+---
+
+#### B) Physische Spionage und Zugangsmissbrauch**  
+
+✅ Shoulder Surfing (Mitschauen über die Schulter)**  
+
+- Spionieren von Passwörtern, PINs oder Kreditkartendaten durch bloßes Hinschauen oder Kameras.  
+- Beispiel: Hacker beobachtet an einem Geldautomaten die Eingabe der PIN und nutzt die Information für Betrug.  
+
+✅ Dumpster Diving (Müll-Durchsuchung)**  
+
+- Angreifer durchsuchen den Abfall von Unternehmen oder Privatpersonen nach entsorgten Dokumenten mit sensiblen Informationen.  
+- Beispiel: Ein Hacker findet weggeworfene Kontoauszüge und nutzt die Daten für Phishing-Angriffe.  
+
+✅ Tailgating/Piggybacking (Unbefugtes Mitgehen)**  
+
+- Täter folgt autorisierten Personen in gesicherte Bereiche, ohne selbst eine Zugangskarte zu haben.  
+- Beispiel: Mitarbeiter hält höflich die Tür auf – ohne zu wissen, dass er einen Angreifer in ein gesichertes Gebäude lässt.  
+
+---
+
+#### C) Digitale Täuschung und Betrugsmaschen**  
+✅ **Phishing (E-Mail- und Website-Betrug)**  
+- Täuschend echte E-Mails oder Webseiten zielen darauf ab, Nutzer zur Preisgabe von Passwörtern zu verleiten.  
+- Beispiel: Opfer erhält eine gefälschte PayPal-Mail mit Link zur Eingabe von Login-Daten – die Seite gehört Betrügern.  
+
+✅ Vishing (Telefonbetrug)**  
+- Social Engineers rufen Opfer an und täuschen dringende Probleme vor.  
+- Beispiel: „Microsoft Support“ ruft an und warnt vor Viren auf dem PC – Opfer installiert Malware.  
+
+✅ Smishing (SMS-Phishing)**  
+- Betrügerische SMS mit gefährlichen Links.  
+- Beispiel: „Ihr Paket ist unterwegs, klicken Sie hier zur Sendungsverfolgung“ – führt zu einer Malware-Seite.  
+
+✅ Typosquatting (Tippfehler-Domain-Betrug)**  
+- Nutzung von ähnlich geschriebenen Webseiten-Adressen.  
+- Beispiel: Anstatt „amazon.de“ ruft das Opfer „amaz0n.de“ auf – eine Fake-Seite, die Login-Daten stiehlt.  
+
+✅ USB-Drop-Attacke**  
+- Infizierte USB-Sticks werden an öffentlichen Orten platziert, um Nutzer zur Nutzung zu verleiten.  
+- Beispiel: Ein Angestellter findet einen USB-Stick mit „Gehaltsabrechnungen 2024“ und steckt ihn ein – schon hat sich Malware verbreitet.  
+
+✅ Social Media Manipulation**  
+- Fake-Profile oder manipulierte Posts zur Meinungsbeeinflussung und Spionage.  
+- Beispiel: Hacker bauen eine LinkedIn-Fake-Identität auf, um IT-Experten zur Weitergabe von Insider-Infos zu verleiten.  
+
+---
+
+### **3. Reale Beispiele für Social Engineering-Angriffe**  
+
+🔴 Twitter-Hack 2020 (Bitcoin-Betrug)**  
+- Hacker gaben sich als Twitter-Administratoren aus und erlangten Zugang zu prominenten Accounts (Elon Musk, Obama, Apple).  
+- Betrug: „Sende mir 1000$ in Bitcoin, ich verdopple es für dich!“ → Millionen erbeutet.  
+
+🔴 Sony Pictures Hack (2014)**  
+- Angreifer täuschten sich als System-Administratoren und lockten Sony-Mitarbeiter dazu, ihre Login-Daten einzugeben.  
+- Folgen: Vertrauliche E-Mails, Filme und interne Daten wurden veröffentlicht.  
+
+🔴 Google & Facebook (100 Mio. $ Betrug)**  
+- Cyberkriminelle täuschten vor, ein echter Hardware-Zulieferer zu sein.  
+- Sie schickten Rechnungen – Google & Facebook zahlten tatsächlich 100 Millionen Dollar an die Betrüger.  
+
+---
+
+### 4. Schutzmaßnahmen gegen Social Engineering**  
+
+🔐 Mitarbeiterschulungen & Bewusstsein**  
+- Sensibilisierung für gängige Betrugsmethoden (Phishing-Tests, regelmäßige Sicherheitstrainings).  
+
+🔐 Zero-Trust-Prinzip**  
+- Jeder muss seine Identität nachweisen – selbst innerhalb des Unternehmens.  
+
+🔐 Multi-Faktor-Authentifizierung (MFA)**  
+- Selbst bei gestohlenen Passwörtern bleibt das Konto geschützt.  
+
+🔐 Technische Schutzmaßnahmen**  
+- E-Mail-Filter, Firewalls, Monitoring verdächtiger Aktivitäten.  
+
+🔐 Physische Sicherheitsmaßnahmen**  
+- Keine Zugangstüren offen lassen, sichere Entsorgung von Dokumenten, keine unbekannten USB-Sticks verwenden.  
+
+---
