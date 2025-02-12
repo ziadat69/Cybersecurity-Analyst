@@ -1,0 +1,36 @@
+### **Zusammenfassung der drahtlosen & mobilen Sicherheitsbedrohungen**
+
+- **Unerwünschte Programme (PUA/PUP)**: Software, die unerwünschte oder schadhafte Effekte wie Werbung oder Malware verursacht.  
+
+- **SMiShing**: Phishing per SMS, bei dem Nutzer auf schadhafte Links klicken oder betrügerische Nummern anrufen.  
+
+- **Rogue Access Point**: Unbefugter WLAN-Zugangspunkt, der oft so konfiguriert ist, dass er als legitimer Punkt erscheint, um Nutzer zu täuschen.  
+
+- **Evil Twin Attack**: Angreifer schaffen ein Fake-WLAN, das wie das legitime Netzwerk aussieht, um Datenverkehr abzufangen.  
+
+- **RF-Jamming**: Störungen von Funkwellen (z.B. WLAN, Bluetooth), um Kommunikation zu blockieren. 
+
+Ein Angreifer sendet absichtlich Störungen auf den Funksignalen von WLAN oder Bluetooth, um den Drahtlosverkehr zu blockieren.
+Dies führt dazu, dass Geräte keine Verbindung zum Netzwerk herstellen können, was zu einem Denial-of-Service (DoS)-Angriff führt.
+
+- **Bluejacking**: Unerwünschte Nachrichten oder Bilder per Bluetooth senden.  
+
+- **Bluesnarfing**: Zugriff auf private Daten eines Geräts über Bluetooth ohne Zustimmung.  
+
+### **Sicherheitsprotokolle**  
+- **WEP**: Veraltetes, unsicheres Verschlüsselungsprotokoll.  
+- **WPA**: Besseres Protokoll als WEP, aber immer noch anfällig.  
+- **WPA2**: Stärkstes aktuelles Protokoll für WLAN-Verschlüsselung.
+
+### **Schutzmaßnahmen**  
+- **Standardkonfigurationen ändern**: Passwörter und Einstellungen anpassen, um Sicherheitslücken zu schließen.  
+- **WLAN-Erkennungstools**: Verwenden von Tools zur Identifikation unerlaubter Zugangspunkte.  
+- **VPN für Remote-Zugriff**: Nutzung eines VPNs, um Daten verschlüsselt zu übertragen.  
+- **Gast-WLAN**: Öffentlich zugängliche Netzwerke vom internen Netzwerk trennen.
+
+### **Praktische Risiken und Szenarien**  
+
+- **Man-in-the-Middle-Angriffe**: Datenabfang durch unsichere WLAN-Netzwerke.  
+
+- **Bluetooth-Angriffe**: Datenklau durch Angreifer mit Zugang zu Bluetooth-fähigen Geräten.
+
