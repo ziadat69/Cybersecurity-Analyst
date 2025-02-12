@@ -1,0 +1,105 @@
+### **Schädliche Software & Cyberangriffe: Arten, Methoden und Schutzmaßnahmen**  
+
+#### 1. Was ist Malware?**  
+- **Malware (Schadsoftware)** ist jeglicher Code, der dazu dient, Systeme zu kompromittieren, Daten zu stehlen oder Geräte zu manipulieren.  
+- Cyberkriminelle nutzen Malware für Spionage, Erpressung oder Sabotage.  
+
+---
+
+### 2. Arten von Malware & Cyberbedrohungen**  
+
+#### A) Selbstreplizierende Malware**  
+
+✅ **Viren**  
+- Befallen Dateien oder Programme und verbreiten sich durch deren Ausführung.  
+- Beispiel: Infizierte Word-Datei, die sich nach dem Öffnen auf dem PC einnistet und Daten löscht.  
+
+✅ **Würmer**  
+- Verbreiten sich selbstständig über Netzwerke ohne Nutzerinteraktion.  
+- Beispiel: **WannaCry-Wurm** infizierte weltweit Hunderttausende PCs durch eine Windows-Sicherheitslücke.  
+
+✅ **Trojaner (Trojanisches Pferd)**  
+- Tarnen sich als nützliche Programme, enthalten aber versteckte Schadfunktionen.  
+- Beispiel: Gefälschte Banking-App, die heimlich Login-Daten an Angreifer sendet.  
+
+✅ **Logische Bomben (Logic Bombs)**  
+- Schadcode, der zu einem bestimmten Zeitpunkt oder durch eine Aktion ausgelöst wird.  
+- Beispiel: Ex-Mitarbeiter hinterlässt eine Zeitbombe, die nach seinem Jobverlust Unternehmensserver lahmlegt.  
+
+---
+
+#### **B) Erpressungs- und Spionage-Software**  
+✅ ** Ransomware (Erpressungstrojaner)**  
+- Verschlüsselt Daten und verlangt Lösegeld für die Entschlüsselung.  
+- Beispiel: **Locky-Virus**, der Krankenhäuser und Firmen weltweit lahmlegte.  
+
+✅ ** Keylogger (Tastaturspionage)**  
+- Zeichnen Tastatureingaben auf und senden sie an Cyberkriminelle.  
+- Beispiel: Spionage-Malware, die Bank-Logins und Passwörter mitschneidet.  
+
+✅ ** Zero-Day-Exploits**  
+- Angriffe auf Software-Schwachstellen, bevor Hersteller sie schließen können.  
+- Beispiel: Staatstrojaner nutzten Zero-Day-Sicherheitslücken für geheime Überwachungen.  
+
+---
+
+#### **C) Netzwerkangriffe & Denial-of-Service (DoS/DDoS)**  
+✅ ** DoS (Denial-of-Service)**  
+- Überlastet Server mit Anfragen, bis diese abstürzen.  
+- Beispiel: Angreifer bombardieren eine Webseite mit Traffic, sodass sie unerreichbar wird.  
+
+✅ ** DDoS (Distributed Denial-of-Service)**  
+- DoS-Angriff von vielen Quellen gleichzeitig (z. B. Botnetze).  
+- Beispiel: **Mirai-Botnet**, das Millionen IoT-Geräte übernahm und Netflix, Twitter und Spotify lahmlegte.  
+
+✅ ** DNS-Angriff e**  
+- **DNS-Spoofing**: Nutzer werden auf gefälschte Webseiten umgeleitet.  
+- **DNS-Amplification**: Missbraucht DNS-Server für verstärkte DDoS-Angriffe.  
+- Beispiel: Cyberkriminelle leiten Online-Banking-Kunden auf Fake-Webseiten um, um Passwörter zu stehlen.  
+
+---
+
+#### ** D) Angriffe auf Netzwerke & Infrastruktur**  
+✅ **Layer-2-Angriffe (Netzwerkangriffe)**  
+
+- **MAC-Spoofing**: Manipulation von MAC-Adressen zur Umgehung von Netzwerksicherungen. 
+
+- **ARP-Spoofing**: Falsche ARP-Antworten, um sich als legitimer Host auszugeben.  
+
+- **Man-in-the-Middle (MITM)**: Abfangen von Datenkommunikation zwischen zwei Parteien. 
+
+- **MAC-Flooding**: Überlastung von Netzwerk-Switches, um den Datenverkehr zu stören.  
+
+✅ * *Man-in-the-Mobile (MITMo) **  
+- Angriff auf Smartphones, um SMS-TANs oder Banking-Daten abzugreifen.  
+- Beispiel: Gefälschte Banking-App, die SMS-TANs direkt an Angreifer weiterleitet.  
+
+---
+
+### **4. Schutzmaßnahmen gegen Malware & Angriffe**  
+
+🔐 **1) Sicherheitsupdates & Patches**  
+- Betriebssysteme, Software und Antivirenprogramme regelmäßig aktualisieren.  
+
+🔐 **2) Firewalls & Intrusion Detection Systems (IDS)**  
+- Netzwerksicherheit erhöhen und verdächtige Aktivitäten erkennen.  
+
+🔐 **3) Multi-Faktor-Authentifizierung (MFA)**  
+- Selbst wenn Passwörter kompromittiert werden, bleibt der Zugang geschützt.  
+
+🔐 **4) Sichere Passwortverwaltung**  
+- Lange, zufällige Passwörter verwenden und Passwort-Manager nutzen.  
+
+🔐 **5) Bewusstseins- & Mitarbeiterschulungen**  
+- Phishing-Tests und Sensibilisierungskampagnen gegen Social Engineering.  
+
+🔐 **6) Backups & Disaster Recovery**  
+- Regelmäßige Offline-Backups erstellen, um sich vor Ransomware-Angriffen zu schützen.  
+
+🔐 **7) USB & externe Geräte absichern**  
+- Keine unbekannten USB-Sticks nutzen und Autorun-Funktionen deaktivieren.  
+
+🔐 **8) Netzwerksegmentierung**  
+- Unternehmensnetzwerke in isolierte Segmente unterteilen, um Schadsoftware einzudämmen.  
+
+---
