@@ -1,0 +1,49 @@
+
+
+-> Bedrohungsbereich:** Jeder Bereich, den Angreifer ausnutzen können, z. B. Netzwerke, Systeme, Benutzer oder Cloud-Infrastrukturen.  
+
+->  Bedrohungskategorien:**  
+
+  - ** Software-Angriffe:** Malware, Ransomware, Zero-Day-Exploits.
+  
+  - **Menschliche Fehler:** Schwache Passwörter, Fehlkonfigurationen, Phishing-Opfer. 
+  
+  - **Interne Bedrohungen:** Datendiebstahl durch unzufriedene Mitarbeiter, unabsichtliche Leaks.  
+  
+  - **Externe Bedrohungen:** Hacker, Cyberkriminelle, staatlich geförderte Gruppen.  
+  
+  - **Physische Bedrohungen:** Hardware-Diebstahl, Naturkatastrophen, Stromausfälle.  
+
+- **Komplexe Angriffe:**  
+  - **APT (Advanced Persistent Threat):**  
+  
+    - Hochentwickelte, langfristige Angriffe, oft von staatlich gesponserten Akteuren.  
+    - Beispiel: „APT28“ (Fancy Bear) – Russische Hackergruppe, bekannt für Angriffe auf NATO und Wahlen.  
+    
+  - **Algorithmus-Angriffe:**  
+    - Manipulation von Algorithmen, z. B. durch KI-gestützte Angriffe oder Hash-Kollisionsangriffe.  
+
+- **Backdoor:**  
+  - Ermöglicht Angreifern Zugang zum System, oft versteckt in legitimen Anwendungen.  
+  
+  - Beispiel: „SolarWinds-Hack“ – Angreifer nutzten eine Backdoor, um monatelang unbemerkt in Regierungsnetzwerke einzudringen.  
+
+- **Rootkits:**  
+  - Manipulieren Betriebssysteme, um sich vor Sicherheitssoftware zu verstecken.  
+  
+  - Beispiel: „Stuxnet“ – Nutzt Rootkit-Techniken, um iranische Urananreicherungsanlagen zu sabotieren.  
+
+- **Darknet:**  
+  - Verschlüsselter Teil des Internets, zugänglich über TOR.  
+  - Wird genutzt für illegale Marktplätze, aber auch für Whistleblower & Journalisten.  
+
+- **Indicators of Compromise (IOC):**  
+
+  - Malware-Signaturen, verdächtige IPs/Domains, ungewöhnliche Systemaktivitäten.  
+  - Beispiel: Wenn ein Unternehmensnetzwerk plötzlich Verbindungen zu einem bekannten C2-Server (Command & Control) herstellt.  
+
+- **Automated Indicator Sharing (AIS):**  
+
+  - Echtzeit-Austausch von Cyberbedrohungen.  
+  - Standards: STIX (Structured Threat Information eXpression) & TAXII (Trusted Automated eXchange of Indicator Information).  
+
