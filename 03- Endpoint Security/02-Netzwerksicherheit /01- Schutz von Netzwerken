@@ -1,0 +1,58 @@
+Schutz von Netzwerken ist entscheidend für den Geschäftsbetrieb. 
+
+Angriffe können zu Datenverlust, gestörtem Online-Handel, Datenschutzverletzungen und ernsthaften Sicherheitsrisiken führen.  
+- **Bedrohungen**: Angriffsvektoren kommen von außen und innen, einschließlich Phishing, unsicheren E-Mails, 
+       ungesicherten Netzwerken und Cloud-Diensten. Daten auf unverschlüsselten Geräten und USBs sind ebenfalls anfällig.  
+
+- **DLP-Kontrollen (Data Loss Prevention)**: Kombination aus strategischen, operativen und taktischen Maßnahmen,
+      um Datenverlust zu verhindern. Besonders wichtig für den Schutz sensibler Geschäftsdaten und geistigem Eigentum. 
+
+- **Tools und Technologien**: Cisco Talos Intelligence hilft dabei,
+    Bedrohungen zu erkennen und zu bekämpfen, indem es Sicherheitslücken identifiziert und Angriffe frühzeitig abwehrt.
+
+
+- **Netzwerksicherheit**: Wichtiger Bestandteil des Geschäftsbetriebs, schützt vor Verlust von Daten, 
+                           finanziellen Schäden, und Bedrohung der Privatsphäre.  
+- **Bedrohungen und Schwachstellen**: Bedrohungen können von außen (z.B. Hacker) oder von innen (
+                     z.B. Mitarbeiter) kommen, während Schwachstellen Schwächen im System oder Netzwerk darstellen.  
+
+- **Risikomanagement**: Prozess zur Minimierung von Risiken, indem geeignete Sicherheitsmaßnahmen getroffen werden. 
+    
+Strategien:  
+  - **Akzeptanz**: Risiko wird bewusst akzeptiert, wenn der Aufwand für Gegenmaßnahmen zu hoch ist.  
+
+  - **Vermeidung**: Maßnahmen, um das Risiko gar nicht erst entstehen zu lassen.  
+
+  - **Reduzierung**: Risikominimierung durch Sicherheitsmaßnahmen.  
+
+  - **Übertragung**: Risiko wird auf Dritte übertragen, z.B. durch Versicherungen.  
+
+- **Hacker-Typen**:  
+
+  - **White-Hat-Hacker**: Nutzen ihre Fähigkeiten zur Verbesserung der Sicherheit, 
+                         arbeiten oft für Unternehmen oder als Sicherheitsberater.  
+
+  - **Grey-Hat-Hacker**: Operieren oft ohne böse Absicht, aber ohne Zustimmung der betroffenen Organisationen.  
+   
+  - **Black-Hat-Hacker**: Kriminelle, die explizit nach Sicherheitslücken suchen,
+                          um Daten zu stehlen oder Schaden zu verursachen.  
+
+- **Bedrohungsakteure**:  
+  - **Script-Kiddies**: Ungeübte Hacker, die vorgefertigte Skripte verwenden, um Netzwerke zu attackieren.  
+ 
+  - **Sicherheitslücken-Broker**: Personen oder Organisationen, die Schwachstellen verkaufen.   
+
+  - **Aktivisten (Hacktivisten)**: Hacken aus politischen oder sozialen Gründen.  
+
+  - **Cyberkriminelle**: Ziel ist der finanzielle Gewinn, oft durch Malware oder Phishing.   
+
+  - **Staatlich unterstützte Hacker**: Hacken mit politischem oder militärischem Hintergrund.  
+
+- **Sicherheitsorganisationen**:  
+  - **CISA (Cybersecurity and Infrastructure Security Agency)**: 
+US-amerikanische Behörde, die die Cybersicherheit fördert und Unternehmen unterstützt. 
+
+  - **NCSA (National Cyber Security Alliance)**: Organisation zur Sensibilisierung für Cybersicherheit und Schutzmaßnahmen.  
+  - **IOC (Indicators of Compromise)**: Daten, die Hinweise auf potenzielle Sicherheitsverletzungen liefern.
+
+
