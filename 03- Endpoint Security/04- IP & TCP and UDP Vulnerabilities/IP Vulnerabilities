@@ -1,0 +1,41 @@
+Es gibt verschiedene Arten von Angriffen, 
+die auf IP abzielen. Zu den häufigsten IP-bezogenen Angriffen gehören:
+
+--> ICMP-Angriffe: 
+
+ICMP wurde entwickelt, um Diagnose-Nachrichten zu übertragen und Fehler zu melden, 
+wenn Routen, Hosts oder Ports nicht verfügbar sind. Angreifer nutzen ICMP für Aufklärungs- und 
+Scan-Angriffe sowie für DoS- und DDoS-Angriffe, häufig unter Verwendung von Amplifikations- und Reflexionstechniken.
+  
+--> Denial-of-Service (DoS) Angriffe:
+
+Diese Angriffe zielen darauf ab, die Ressourcen eines Zielsystems zu erschöpfen, 
+um es entweder zum Absturz zu bringen oder die Netzwerkressourcen zu blockieren.
+
+--> Distributed Denial-of-Service (DDoS) Angriffe: 
+
+Eine erweiterte Form von DoS-Angriffen, bei denen die Angriffe von mehreren Quellen gleichzeitig ausgeführt werden,
+um das Ziel zu überlasten.
+
+--> Adress-Spoofing-Angriffe: 
+
+Dabei erstellt ein Angreifer Pakete mit falschen Quell-IP-Adressen, 
+um entweder die Identität des Absenders zu verbergen oder sich als ein anderer legitimer Benutzer auszugeben.
+Adress-Spoofing kann für Sitzungs-Hijacking oder DoS-Angriffe verwendet werden.
+
+--> Man-in-the-Middle-Angriffe (MiTM): 
+
+Hierbei schaltet sich der Angreifer in die Kommunikation zwischen zwei Parteien ein und kann so Daten abfangen, 
+ändern oder manipulieren.
+
+--> Session Hijacking: 
+
+Hierbei übernimmt der Angreifer eine laufende Sitzung, 
+indem er die Sitzungscookies oder Token eines legitimen Benutzers stiehlt, um auf die Sitzung zuzugreifen und 
+die Kontrolle zu übernehmen.
+
+--> MAC-Adressen-Spoofing: 
+
+Dieser Angriff tritt auf, wenn ein Angreifer Zugriff auf ein internes Netzwerk hat und 
+die MAC-Adresse eines anderen Geräts fälscht, um sich als dieses Gerät auszugeben.
+
