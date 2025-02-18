@@ -1,0 +1,16 @@
+Das TCP-Segment und das UDP-Datagramm erscheinen direkt nach dem IP-Header. Es ist wichtig, 
+die Layer-4-Header und ihre Funktionen in der Datenkommunikation zu verstehen. TCP bietet eine zuverlässige Übertragung, 
+Flusskontrolle und zustandsbehaftete Kommunikation. Die zustandsbehaftete TCP-Kommunikation 
+zwischen zwei Parteien erfolgt während des TCP-Drei-Wege-Handshake. Bedrohungsakteure können verschiedene 
+TCP-bezogene Angriffe durchführen, darunter:  
+
+- TCP-Port-Scans  
+- TCP-SYN-Flood-Angriff  
+- TCP-Reset-Angriff  
+- TCP-Session-Hijacking-Angriff  
+
+Das UDP-Segment (auch Datagramm genannt) ist deutlich kleiner als das TCP-Segment,
+was es besonders attraktiv für Protokolle macht, die einfache Anfragen und Antworten nutzen, 
+wie DNS, DHCP, SNMP und andere. Bedrohungsakteure können UDP-Flood-Angriffe durchführen, 
+die alle bekannten UDP-Ports eines Servers durchscannen, um geschlossene Ports zu identifizieren. 
+Dies kann zu einer DoS-Situation führen.
