@@ -1,0 +1,29 @@
+Webbrowser werden von fast allen genutzt,
+und es ist nicht möglich, das Browsen komplett zu blockieren, da Unternehmen auf das
+Web zugreifen müssen. Cybersicherheitsexperten müssen verstehen, wie häufige Angriffe im Web funktionieren. 
+Ein typischer Angriff passiert, wenn ein Benutzer unwissentlich eine Webseite besucht,
+die von schadhafter Software (Malware) infiziert ist. Diese Webseite leitet den Benutzer zu einer anderen Seite weiter, 
+die dann schadhafter Code enthält, der das Gerät des Benutzers infiziert. Dies wird als "Drive-by-Download" bezeichnet. 
+Das Ziel des Angreifers ist es, den Webbrowser des Opfers auf eine schadhafte Seite zu leiten, die dann die schadhafte 
+Software ausführt. Einige schadhafte Webseiten nutzen Schwachstellen in Browsern oder Plugins aus, um das System des Benutzers
+zu hacken. In großen Netzwerken werden Intrusion Detection Systems (IDS) verwendet, um heruntergeladene Dateien auf Malware zu 
+scannen. Wenn Malware erkannt wird, gibt das IDS eine Warnung aus und speichert das Ereignis in den Logs, die später analysiert
+werden können.
+
+Um sich gegen solche Angriffe zu schützen, sollten regelmäßig Betriebssysteme und Browser mit den neuesten Updates und Patches 
+versorgt werden. Ein Web-Proxy kann helfen, schadhafte Webseiten zu blockieren. Es ist auch wichtig, bewährte Sicherheitspraktiken
+bei der Entwicklung von Webanwendungen zu verwenden, wie sie im OWASP-Projekt beschrieben sind, und die Endbenutzer darüber 
+aufzuklären, wie sie sich vor Web-Angriffen schützen können.
+
+Es gibt auch Angriffe, die über E-Mails Malware oder Phishing-Nachrichten verbreiten, um persönliche Informationen zu stehlen. 
+SMTP-Server, die E-Mails versenden, können ebenfalls Schwachstellen haben und müssen 
+regelmäßig mit Sicherheitsupdates versehen werden. Es gibt Sicherheitslösungen,
+die diese Bedrohungen erkennen und blockieren können.
+
+Webanwendungen greifen oft auf Datenbanken zu, die vertrauliche Informationen speichern. 
+Angreifer versuchen, durch sogenannte SQL-Injection oder Code-Injection in diese Datenbanken einzudringen,
+um vertrauliche Daten zu stehlen. Auch Cross-Site Scripting (XSS) ist eine häufige Bedrohung,
+bei der schadhafter Code im Browser des Benutzers ausgeführt wird, um Zugriff auf sensible Daten zu erhalten.
+
+Die OWASP Top 10 ist eine Liste von häufigen Sicherheitslücken in Webanwendungen, die Unternehmen dabei hilft, 
+ihre Anwendungen sicherer zu machen.
