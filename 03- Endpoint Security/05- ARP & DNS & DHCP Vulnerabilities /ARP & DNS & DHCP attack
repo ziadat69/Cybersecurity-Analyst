@@ -1,0 +1,80 @@
+
+### 1. **ARP Spoofing (oder ARP Poisoning):**
+   - **Wie der Angriff funktioniert:**
+     - Beim ARP Spoofing sendet der Angreifer gefälschte ARP-Nachrichten (Address Resolution Protocol) an Geräte im Netzwerk.
+     - Ziel ist es, die ARP-Cache-Tabelle der Geräte zu manipulieren, sodass sie glauben, dass der Angreifer mit einer legitimen IP-Adresse verbunden ist.
+     - Dadurch kann der Angreifer den Datenverkehr abfangen oder umleiten und möglicherweise einen Man-in-the-Middle-Angriff (MiTM) durchführen.
+
+   - **Verwendete Werkzeuge:**
+     - **Ettercap**: Ein beliebtes Open-Source-Tool für Man-in-the-Middle-Angriffe, das auch ARP Spoofing ermöglicht.
+     - **Cain and Abel**: Ein bekanntes Tool für das Knacken von Passwörtern und das Sniffen von Netzwerkverkehr, einschließlich ARP Spoofing.
+     - **Bettercap**: Ein fortgeschrittenes Werkzeug zum Abhören von Netzwerken, das ARP Spoofing und andere Angriffstechniken unterstützt.
+
+### 2. **DNS Spoofing (oder DNS Cache Poisoning):**
+   - **Wie der Angriff funktioniert:**
+     - Der Angreifer sendet gefälschte DNS-Antworten an DNS-Server oder -Clients, um falsche IP-Adressen zu liefern.
+     - Dies führt dazu, dass Benutzer auf betrügerische Websites umgeleitet werden, was das Risiko von Phishing oder Malware-Infektionen erhöht.
+
+   - **Verwendete Werkzeuge:**
+     - **DNSChef**: Ein DNS-Spoofing-Tool, das als gefälschter DNS-Server fungiert.
+     - **Scapy**: Ein vielseitiges Python-Tool zum Erstellen von benutzerdefinierten Paketen, einschließlich gefälschter DNS-Antworten.
+     - **DNSSpoof**: Ein Unix/Linux-Tool, das speziell für DNS-Spoofing entwickelt wurde.
+
+### 3. **DNS Amplification (DNS-Verstärkung):**
+   - **Wie der Angriff funktioniert:**
+     - Der Angreifer sendet kleine DNS-Anfragen an öffentliche DNS-Server mit der IP-Adresse des Ziels als Absender.
+     - Der DNS-Server antwortet mit einer viel größeren Antwort, die das Ziel überflutet und zu einer Denial-of-Service (DoS)- oder Distributed Denial-of-Service (DDoS)-Attacke führt.
+
+   - **Verwendete Werkzeuge:**
+     - **Metasploit Framework**: Ein Exploit-Framework, das unter anderem DNS Amplification-Angriffe durchführen kann.
+     - **Hping**: Ein leistungsstarkes Tool, mit dem benutzerdefinierte Pakete gesendet werden können, einschließlich für DNS-Verstärkung.
+     - **LOIC (Low Orbit Ion Cannon)**: Ein DDoS-Tool, das auch für DNS-Verstärkung verwendet werden kann.
+
+### 4. **DNS Reflection:**
+   - **Wie der Angriff funktioniert:**
+     - Ähnlich wie DNS-Verstärkung, aber hier gibt der Angreifer vor, dass er eine andere IP-Adresse besitzt und sendet DNS-Anfragen mit gefälschtem Absender.
+     - Die DNS-Server antworten mit größeren Datenmengen, die an das Ziel geschickt werden, was einen DDoS-Angriff erzeugt.
+
+   - **Verwendete Werkzeuge:**
+     - **Metasploit Framework**: Bietet Module für DNS-Reflexionsangriffe.
+     - **Hping**: Ein weiteres Tool, das für DNS-Reflexion verwendet werden kann.
+
+### 5. **DNS Tunneling:**
+   - **Wie der Angriff funktioniert:**
+     - Der Angreifer versteckt schadhafte Daten oder Befehle innerhalb von DNS-Anfragen und -Antworten, um durch Firewalls oder Sicherheitsmaßnahmen zu schleusen.
+     - Dies kann dazu verwendet werden, Daten zu exfiltrieren oder mit einem kompromittierten Host zu kommunizieren, ohne entdeckt zu werden.
+
+   - **Verwendete Werkzeuge:**
+     - **iodine**: Ein Tool, das DNS Tunneling ermöglicht, um Daten über DNS-Verbindungen zu übermitteln.
+     - **dnscat2**: Ein weiteres Tool für DNS Tunneling, das eine vollständige Kommunikationsverbindung über DNS ermöglicht.
+     - **DNSTunnel**: Ein weiteres Tool, das DNS als Tunnel für die Datenübertragung nutzt.
+
+### 6. **DHCP Spoofing:**
+   - **Wie der Angriff funktioniert:**
+     - Der Angreifer setzt einen gefälschten DHCP-Server in einem Netzwerk ein, um falsche Netzwerkinformationen (wie IP-Adressen oder DNS-Server) an legitime Clients zu senden.
+     - Dies kann zu Verbindungsproblemen führen oder den Angreifer in die Lage versetzen, den Datenverkehr umzuleiten.
+
+   - **Verwendete Werkzeuge:**
+     - **dsniff**: Ein Tool, das eine Sammlung von Netzwerkangriffen umfasst, darunter auch DHCP-Spoofing.
+     - **Yersinia**: Ein mächtiges Tool, das speziell für Angriffe auf verschiedene Netzwerkprotokolle, einschließlich DHCP, entwickelt wurde.
+
+### 7. **Dynamic DNS Abuse:**
+   - **Wie der Angriff funktioniert:**
+     - Der Angreifer verwendet dynamisches DNS, um regelmäßig seine IP-Adresse zu ändern und so Sicherheitsmechanismen zu umgehen, die auf statische IP-Adressen angewiesen sind.
+     - Dies kann helfen, die Herkunft des Angriffs zu verschleiern und das Erkennen des Angreifers zu erschweren.
+
+   - **Verwendete Werkzeuge:**
+     - **DynDNS**: Ein Service für dynamisches DNS, der von Angreifern zur Tarnung ihrer IP-Adresse verwendet werden kann.
+     - **No-IP**: Ein weiterer dynamischer DNS-Service, der verwendet werden kann, um IP-Adressen schnell zu ändern.
+     - **dnsmasq**: Ein DNS-Server, der dynamisches DNS unterstützt und von Angreifern ausgenutzt werden kann.
+
+### 8. **IP Address Spoofing:**
+   - **Wie der Angriff funktioniert:**
+     - Der Angreifer fälscht die Quell-IP-Adresse seiner Pakete, um vorzutäuschen, dass die Pakete von einem anderen, vertrauenswürdigen Gerät stammen.
+     - Dies kann verwendet werden, um DoS-Angriffe oder Angriffe auf Protokolle zur Authentifizierung zu starten.
+
+   - **Verwendete Werkzeuge:**
+     - **Hping**: Ein Werkzeug zur Erstellung von benutzerdefinierten Paketen, einschließlich der Fälschung von IP-Adressen.
+     - **Scapy**: Ein weiteres leistungsstarkes Tool, mit dem IP-Adressen in Paketen leicht gefälscht werden können.
+     - **Nemesis**: Ein Tool, das für das Erstellen von benutzerdefinierten Paketen mit gefälschten IP-Adressen verwendet wird.
+
