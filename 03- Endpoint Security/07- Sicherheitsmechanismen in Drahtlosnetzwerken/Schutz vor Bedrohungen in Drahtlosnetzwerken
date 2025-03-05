@@ -1,0 +1,37 @@
+WLAN-Geräte verbinden sich mit einem Access Point (AP) oder einem Wireless LAN Controller (WLC) gemäß dem 802.11-Standard. 
+Das 802.11-Rahmenformat ähnelt dem Ethernet-Rahmenformat, enthält jedoch zusätzliche Felder. WLAN-Geräte verwenden die Methode "Carrier Sense Multiple Access 
+with Collision Avoidance" (CSMA/CA), um zu bestimmen, wie und wann Daten im Netzwerk gesendet werden, um Kollisionen zu vermeiden.
+Um sich mit einem WLAN-Netzwerk zu verbinden, durchlaufen drahtlose Geräte drei Phasen: Erkennung des Access Points,
+Authentifizierung mit dem Access Point und Verbindung mit dem Access Point. Access Points können entweder einzeln (autonom) oder mithilfe eines WLC konfiguriert werden,
+um die Konfiguration und Überwachung mehrerer Access Points zu vereinfachen.
+
+
+Drahtlose Netzwerke sind verschiedenen Bedrohungen ausgesetzt, darunter
+
+* Datenabfang, 
+* unbefugte drahtlose Zugriffe,
+* DoS-Angriffe und rogue APs (unbefugte Access Points).
+
+Ein DoS-Angriff auf ein drahtloses Netzwerk kann durch falsch konfigurierte Geräte,
+schadhafte Benutzer, die absichtlich drahtlose Kommunikation stören, oder unbeabsichtigte Interferenzen verursacht werden.
+
+Ein rogue AP ist ein Access Point oder drahtloser Router, der ohne ausdrückliche Genehmigung an ein Unternehmensnetzwerk angeschlossen wird.
+Wenn ein Angreifer sich mit einem rogue AP verbindet, kann er MAC-Adressen abfangen, Datenpakete mitschneiden,
+auf Netzwerkressourcen zugreifen oder einen MITM-Angriff (Man-in-the-Middle) durchführen.
+
+Bei einem MITM-Angriff platziert sich der Angreifer zwischen zwei legitimen Parteien, um die zwischen ihnen übertragenen Daten zu lesen oder zu modifizieren.
+Ein häufiges Beispiel für einen drahtlosen MITM-Angriff ist der "Evil Twin AP", bei dem ein Bedrohungsakteur
+einen rogue AP aufstellt und ihn mit dem gleichen SSID wie ein legitimer AP konfiguriert. 
+Um die Installation von rogue APs zu verhindern,
+sollten Unternehmen ihre WLCs (Wireless LAN Controller) mit entsprechenden Sicherheitsrichtlinien für rogue APs konfigurieren.
+
+
+Um drahtlose Eindringlinge fernzuhalten und die Daten zu schützen, sind immer noch grundlegende Sicherheitsfunktionen
+in den meisten Routern und Access Points (APs) verfügbar, wie z. B. SSID-Verbergen und MAC-Adressenfilterung.
+Es gibt vier Techniken zur Authentifizierung von gemeinsamen Schlüsseln: WEP, WPA, WPA2 und WPA3 (WPA3-fähige Geräte sind noch nicht weit verbreitet).
+Hauptsächlich bieten Router zwei Authentifizierungsoptionen: WPA und WPA2. WPA2 ist dabei die sicherere der beiden.
+
+Verschlüsselung wird verwendet,
+um die Daten zu schützen. WPA- und WPA2-Standards verwenden die folgenden Verschlüsselungsprotokolle: TKIP und AES. In Netzwerken mit 
+strengeren Sicherheitsanforderungen ist zusätzliche Authentifizierung oder Anmeldung erforderlich, um drahtlosen Clients Zugang zu gewähren. 
+Die Wahl des Enterprise-Sicherheitsmodus erfordert einen RADIUS-Server für Authentifizierung, Autorisierung und Abrechnung (AAA).
