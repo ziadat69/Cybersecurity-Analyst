@@ -1,0 +1,245 @@
+
+1. Erstellen einer Domänenumgebung mit dem Domänennamen (ABC.LOCAL)
+
+    Installiere Windows Server und richte den PDC (Primary Domain Controller) ein.
+    Server zum Domain Controller hochstufen:
+        Öffne den Server-Manager > Verwalten > Rollen und Features hinzufügen.
+        Wähle Active Directory-Domänendienste (AD DS) aus.
+        Schließe die Installation ab und klicke anschließend auf Diesen Server zum Domänencontroller hochstufen.
+        Wähle Neue Gesamtstruktur erstellen und gib den Domänennamen ABC.LOCAL an.
+        Konfiguriere den NetBIOS-Namen und setze ein sicheres Administratorpasswort.
+        Nach dem Neustart wird der Server Teil der Domäne ABC.LOCAL.
+
+2. Erstelle Organisationseinheiten (OUs) für jede Abteilung
+
+    Öffne Active Directory-Benutzer und -Computer (ADUC).
+    Klicke mit der rechten Maustaste auf die Domäne ABC.LOCAL > Neu > Organisationseinheit.
+    Erstelle folgende OUs:
+        HR
+        Sales
+        Finance
+        Dev
+        IT
+
+3. Erstelle Benutzer und Gruppen in jeder Abteilung
+
+    Gruppen erstellen:
+        Rechtsklicke auf die HR-OU > Neu > Gruppe. Benenne die Gruppe HR Group.
+        Wiederhole diesen Schritt für andere Abteilungen (Sales, Finance, Dev, IT).
+    Benutzer erstellen:
+        Rechtsklicke auf eine der Abteilungs-OUs (z. B. HR) > Neu > Benutzer.
+        Erstelle Benutzer für jede Abteilung (z. B. HR User1, HR User2).
+    Benutzer zu Gruppen hinzufügen:
+        Rechtsklicke auf einen Benutzer > Zu Gruppe hinzufügen > Wähle die entsprechende Abteilungsgruppe aus.
+
+4. Konfiguriere Passwort-Richtlinien
+
+    Öffne Gruppenrichtlinien-Verwaltung > Rechtsklicke auf Standardrichtlinie der Domäne > Bearbeiten.
+    Gehe zu Computerkonfiguration > Richtlinien > Windows-Einstellungen > Sicherheitsrichtlinien > Kontenrichtlinien > Passwortrichtlinie:
+        Setze das Maximale Passwortalter auf 60 Tage.
+        Setze die Minimale Passwortlänge auf 6 Zeichen.
+        Aktiviere Komplexitätsanforderungen für Passwörter.
+        Setze den Passwortverlauf auf 3 Passwörter.
+    Unter Kontosperr-Richtlinie:
+        Setze die Kontosperrdauer auf 60 Minuten.
+        Setze die Kontosperrschwelle auf 4 ungültige Versuche.
+        Setze Zurücksetzen des Sperrzählers nach auf 15 Minuten.
+
+5. Kontosperrung nach 4 ungültigen Versuchen erzwingen
+
+    Wie oben beschrieben, wird dies unter Kontosperr-Richtlinie in der Gruppenrichtlinie konfiguriert.
+
+6. Erlaube Remote-Desktop-Verbindungen auf allen Maschinen in der Domäne
+
+    Öffne Gruppenrichtlinien-Verwaltung > Standardrichtlinie der Domäne > Bearbeiten.
+    Gehe zu Computerkonfiguration > Richtlinien > Administrative Vorlagen > Windows-Komponenten > Remote Desktop-Dienste > Remote Desktop Session Host > Verbindungen:
+        Aktiviere Remoteverbindungen mit Remote Desktop-Diensten zulassen.
+    Stelle sicher, dass die Firewall-Regeln für RDP-Verbindungen konfiguriert sind.
+
+7. Verhindere Zugriff auf externe Speicher, Task-Manager und entferne Kontextmenü-Optionen
+
+    Externe Speichergeräte blockieren:
+        Unter Gruppenrichtlinien-Verwaltung > Standardrichtlinie der Domäne > Bearbeiten.
+        Gehe zu Benutzerkonfiguration > Richtlinien > Administrative Vorlagen > System > Zugriff auf entfernte Speichergeräte:
+            Setze Alle entfernten Speicherklassen: Allen Zugriff verweigern auf Aktiviert.
+    Task-Manager deaktivieren:
+        Unter Benutzerkonfiguration > Richtlinien > Administrative Vorlagen > System > Strg+Alt+Entf-Optionen:
+            Setze Task-Manager entfernen auf Aktiviert.
+    Kontextmenü-Eigenschaften entfernen:
+        Unter Benutzerkonfiguration > Richtlinien > Administrative Vorlagen > Windows-Komponenten > Datei-Explorer:
+            Setze Eigenschaften aus dem Kontextmenü entfernen auf Aktiviert.
+
+8. Konfiguriere DHCP
+
+    Öffne Server-Manager > Verwalten > Rollen und Features hinzufügen.
+    Installiere die DHCP-Server-Rolle.
+    Konfiguriere den DHCP-Bereich:
+        Setze die Start-IP-Adresse: 192.168.1.40 und die End-IP-Adresse: 192.168.1.230.
+        Setze die Subnetzmaske auf /24 (255.255.255.0).
+    IP-Bereich ausschließen:
+        Rechtsklicke auf den Bereich > Neuen Ausschlussbereich hinzufügen > Schließe den Bereich von 192.168.1.80 bis 192.168.1.85 aus.
+
+9. Erstelle DNS-Lastenausgleich für www.abc.local
+
+    Öffne DNS-Manager.
+    Erstelle unter Forward Lookup Zones einen A-Eintrag für www.abc.local mit zwei IP-Adressen (192.168.1.8 und 192.168.1.9).
+
+10. Konfiguriere DHCP-Fehlertoleranz auf Windows Server Core
+
+    Installiere Windows Server Core (minimale Benutzeroberfläche).
+    Verwende Netsh oder PowerShell, um DHCP-Fehlertoleranz zu konfigurieren.
+    Konfiguriere auf dem DHCP-Server die Fehlertoleranz unter Server-Manager > DHCP > Aktion > Fehlertoleranz konfigurieren.
+
+11. Installiere Hyper-V auf Windows Server Core
+
+    Installiere die Hyper-V-Rolle auf dem Windows Server Core mit PowerShell:
+
+Install-WindowsFeature -Name Hyper-V
+
+Erstelle eine Core-VM und konfiguriere Hyper-V-Replikation zwischen der Core-VM und dem PDC.
+
+Here is a step-by-step guide tailored for **Windows Server** to complete each of your tasks:
+
+### 1. **Configure DHCP Failover on Windows Server Core**
+   - First, ensure **DHCP Server** is installed on both the Primary and Secondary DHCP servers.
+   - On both the Primary and Secondary DHCP servers, open PowerShell and run:
+   
+     ```powershell
+     Install-WindowsFeature -Name DHCP
+     ```
+
+   - Configure **DHCP Failover** on the primary DHCP server:
+   
+     ```powershell
+     Add-DhcpServerv4Failover -ComputerName "PrimaryDHCP" -PartnerServer "SecondaryDHCP" -Name "FailoverPartner" -SharedSecret "YourSecretKey" -Mode HotStandby
+     ```
+
+   - Replace `PrimaryDHCP`, `SecondaryDHCP`, and `YourSecretKey` with actual names and your desired failover secret key.
+
+### 2. **Install Hyper-V Role on Windows Server Core**
+   - Open PowerShell on your Windows Server Core and run:
+   
+     ```powershell
+     Install-WindowsFeature -Name Hyper-V
+     ```
+
+   - Create a **new virtual machine** (VM) named `CoreVM` with 2 GB of RAM and a 20 GB virtual hard drive:
+   
+     ```powershell
+     New-VM -Name "CoreVM" -MemoryStartupBytes 2GB -NewVHDPath "C:\VMs\CoreVM.vhdx" -NewVHDSizeBytes 20GB -SwitchName "VirtualSwitch"
+     ```
+
+   - After creating the VM, configure **Hyper-V Replica** to replicate from the PDC server:
+   
+     ```powershell
+     Set-VMReplication -VMName "CoreVM" -ReplicationServer "PDCServer" -ReplicationPort 80 -AuthenticationType Kerberos
+     ```
+
+### 3. **Install Windows 10 for the Client Through WDS**
+   - First, install **Windows Deployment Services (WDS)** on your server:
+   
+     ```powershell
+     Install-WindowsFeature -Name WDS
+     ```
+
+   - Set up the **WDS server**:
+   
+     ```powershell
+     WDSUTIL /initialize-server /server:<WDS_Server_Name>
+     ```
+
+   - Add the **Windows 10 installation image** to WDS:
+   
+     ```powershell
+     WDSUTIL /Add-Image /ImageFile:"<path_to_Windows_10_Install_Image>" /ImageGroup:"Windows 10 Images"
+     ```
+
+   - After configuring WDS, boot the client machine via network and install Windows 10.
+
+   - Once Windows 10 is installed, **join the client to the domain** using:
+   
+     ```powershell
+     Add-Computer -DomainName "ABC.LOCAL" -Credential (Get-Credential)
+     ```
+
+### 4. **Add Dev Group as Local Administrator**
+   - After joining the machine to the domain, you can add the **Dev** group as a local administrator on the client machine:
+   
+     ```powershell
+     Add-LocalGroupMember -Group "Administrators" -Member "ABC\Dev"
+     ```
+
+### 5. **Create a Shared Folder for Dev and HR with Permissions**
+   - On the server, create a shared folder and set up access permissions:
+   
+     ```powershell
+     New-Item -Path "C:\Shared\DevHR" -ItemType Directory
+     New-SmbShare -Name "DevHR" -Path "C:\Shared\DevHR" -FullAccess "ABC\Dev", "ABC\HR"
+     ```
+
+   - Set NTFS permissions to allow **creating and editing** but **not deleting**:
+   
+     ```powershell
+     $Acl = Get-Acl "C:\Shared\DevHR"
+     $AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("ABC\Dev","Modify","ContainerInherit, ObjectInherit","None","Allow")
+     $Acl.AddAccessRule($AccessRule)
+     Set-Acl "C:\Shared\DevHR" $Acl
+     ```
+
+### 6. **Create a MAP Network Drive for Dev and HR**
+   - To create a network drive for the **Dev** and **HR** groups, use Group Policy or a login script. You can also use PowerShell on the server to map the drive:
+   
+     ```powershell
+     New-PSDrive -Name "DevHR" -PSProvider FileSystem -Root "\\Server\Shared\DevHR" -Persist
+     ```
+
+   - Alternatively, create a **Group Policy Preference** or **Logon Script** to map the network drive for the **Dev** and **HR** groups.
+
+### 7. **Add Printer for All Domain Users**
+   - On the server, install and share the printer:
+   
+     ```powershell
+     Add-Printer -Name "PrinterName" -Port "TCPIP_192.168.1.100" -DriverName "PrinterDriver" -Shared
+     ```
+
+   - Restrict the printer to black-and-white printing only, and set access times (9:00 AM to 4:00 PM):
+   
+     - Use **Group Policy** to set the printing restrictions:
+       - Under **User Configuration** > **Administrative Templates** > **Printers** > Set **"Only allow monochrome printing"** to **Enabled**.
+       - To restrict printing times, you may need a custom script to check the time and allow or block printing.
+
+### 8. **Make an Additional Domain Controller with Alternate DNS**
+   - Install the **Active Directory Domain Services (AD DS)** role on the second server:
+   
+     ```powershell
+     Install-WindowsFeature -Name AD-Domain-Services
+     ```
+
+   - Promote the second server to an **Additional Domain Controller** (ADC):
+   
+     ```powershell
+     Install-ADDSDomainController -DomainName "ABC.LOCAL" -InstallDns -NoGlobalCatalog:$false -Credential (Get-Credential)
+     ```
+
+   - Configure **DNS** to use an alternate DNS:
+   
+     ```powershell
+     Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("192.168.1.1", "192.168.1.2")
+     ```
+
+### 9. **Create a Full Server Backup Every Day at 11:00 PM**
+   - Install **Windows Server Backup** feature:
+   
+     ```powershell
+     Install-WindowsFeature -Name Windows-Server-Backup
+     ```
+
+   - Schedule a **full server backup** at 11:00 PM daily:
+   
+     ```powershell
+     schtasks /create /tn "Server Backup" /tr "wbadmin start backup -backupTarget:D: -include:C: -allCritical -quiet" /sc daily /st 23:00
+     ```
+
+   - Ensure the backup is stored on the ADC or another remote location as needed.
+
+---
