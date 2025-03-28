@@ -1,1 +1,10 @@
+Erklärung: Die Remote Desktop-Verbindung ermöglicht es dir,
+dich mit einem anderen Computer über das Netzwerk zu verbinden und ihn fernzusteuern.
 
+Lab:
+
+Drücke Win + R, gib „mstsc“ ein und drücke Enter.
+
+Gib die IP-Adresse eines entfernten Computers ein, mit dem du dich verbinden möchtest (stellen sicher, dass RDP auf diesem aktiviert ist).
+
+Verbinde dich mit dem entfernten System und führe einen einfachen Befehl aus.
