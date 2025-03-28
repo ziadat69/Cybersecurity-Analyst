@@ -1,1 +1,10 @@
+04- Windows PowerShell
+
+ffnen: Drücke Win + X und wähle „Windows PowerShell“ aus.
+
+    Prozesse anzeigen: Gib den Befehl Get-Process ein und drücke Enter. 
+Dies zeigt eine Liste aller laufenden Prozesse.
+
+Prozess stoppen: Gib den Befehl Stop-Process -Name "prozessname" ein (ersetze „prozessname“ durch einen tatsächlichen Prozess wie „notepad“).
+
 
