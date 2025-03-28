@@ -1,1 +1,12 @@
+Erklärung: Der Windows Registrierungseditor (regedit) ermöglicht es,
+die Windows-Registry zu bearbeiten, um Systemeinstellungen zu ändern. Es ist ein mächtiges Tool,
+das vorsichtig verwendet werden sollte, da falsche Änderungen zu Problemen führen können.
 
+
+Öffnen:  gib „regedit“ ein und drücke Enter.
+
+Navigiere zu einem Schlüssel: Gehe zu HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion.
+
+Neuen Schlüssel erstellen: Klicke mit der rechten Maustaste auf „CurrentVersion“, wähle „Neu“ und dann „Schlüssel“. Nenne ihn „TestKey“.
+
+Wert hinzufügen: Klicke mit der rechten Maustaste auf „TestKey“, wähle „Neu“ und dann „Zeichenfolgenwert“. Nenne ihn „TestValue“ und setze einen Wert.
