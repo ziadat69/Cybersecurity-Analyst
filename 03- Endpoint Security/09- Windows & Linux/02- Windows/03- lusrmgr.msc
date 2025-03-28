@@ -1,1 +1,17 @@
+Erklärung: Der Local User and Group Manager (lusrmgr.msc) ermöglicht es dir,
+Benutzerkonten und Gruppen auf einem lokalen Windows-Rechner zu verwalten.
 
+
+
+-Lab
+Öffnen: Drücke Win + R, gib „lusrmgr.msc“ ein und drücke Enter.
+
+Benutzer erstellen: Gehe zu „Benutzer“, klicke mit der rechten Maustaste und wähle „Neu“ > „Benutzer“.
+
+    Gib einen Benutzernamen und ein Passwort ein.
+
+    Wähle „Benutzerkonto erstellen“.
+
+Benutzer zu einer Gruppe hinzufügen: Wähle den neuen Benutzer, 
+klicke mit der rechten Maustaste und wähle „Zu Gruppe hinzufügen“.
+Wähle „Administratoren“ aus der Liste.
