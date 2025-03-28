@@ -1,0 +1,20 @@
+Windows Task Manager
+
+
+regedit.exe
+
+
+lusrmgr.msc
+
+
+هناك أربعة مستويات من المساعدة في Windows PowerShel
+
+    الأمر get-help PS - يعرض التعليمات الأساسية للأمر
+    الأمر get-help PS [-examples] - لعرض التعليمات الأساسية لأمر مصحوبًا بأمثلة
+    الأمر get-help PS [-detailed] - يعرض تعليمات مفصلة لأمر مع أمثلة
+    get-help PS command [-full] - يعرض جميع معلومات المساعدة لأمر مع أمثلة بعمق أكبر
+
+
+
+
+ Instrumentation (WMI)
