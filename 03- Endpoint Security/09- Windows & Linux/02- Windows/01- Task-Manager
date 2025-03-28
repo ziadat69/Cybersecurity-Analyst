@@ -1,20 +1,24 @@
-Windows Task Manager
+Erklärung: Der Task-Manager zeigt alle laufenden Prozesse und Anwendungen an und bietet 
+die Möglichkeit, diese zu überwachen oder zu beenden. Er zeigt auch die Ressourcennutzung von CPU, RAM, 
+Festplatte und Netzwerk an. Verwendung im Lab:
 
+-rozesse überwachen: Du kannst die Auslastung des Systems überwachen und problematische Prozesse identifizieren.
+-Prozesse beenden: Manchmal müssen nicht reagierende Anwendungen oder Programme über den Task-Manager beendet
+werden.
 
-regedit.exe
+01- Task-Manager
 
+    Öffnen:  Gib „Task-Manager“ in das Suchfeld ein und drücke Enter.
 
-lusrmgr.msc
+    Tabellenüberprüfung:
 
+     
+- Gehe zu Prozesse, um eine Liste aller laufenden Programme und Prozesse zu sehen.
 
-هناك أربعة مستويات من المساعدة في Windows PowerShel
+        
+- Wechsle zu Leistung, um Systemressourcen (CPU, RAM, Festplatte) zu überwachen.
 
-    الأمر get-help PS - يعرض التعليمات الأساسية للأمر
-    الأمر get-help PS [-examples] - لعرض التعليمات الأساسية لأمر مصحوبًا بأمثلة
-    الأمر get-help PS [-detailed] - يعرض تعليمات مفصلة لأمر مع أمثلة
-    get-help PS command [-full] - يعرض جميع معلومات المساعدة لأمر مع أمثلة بعمق أكبر
+    
+- Prozess beenden: Wähle einen nicht reagierenden Prozess aus und klicke auf „Task beenden“, um ihn zu stoppen.
 
-
-
-
- Instrumentation (WMI)
+- Autostart-Programme: Wechsle zur Registerkarte „Autostart“ und deaktiviere ein Programm, das beim Systemstart automatisch ausgeführt wird.
