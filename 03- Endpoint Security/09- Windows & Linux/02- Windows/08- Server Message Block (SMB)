@@ -1,1 +1,4 @@
-
+Server Message Block (SMB) ist ein Netzwerkprotokoll,
+das hauptsächlich für den Datei- und Druckfreigabedienst unter Windows verwendet wird. 
+Es ermöglicht Computern im Netzwerk, auf freigegebene Dateien,
+Drucker und andere Netzwerkressourcen zuzugreifen.
