@@ -1,1 +1,48 @@
+### 1. Local Security Policy öffnen  
 
+Die Local Security Policy ist ein Windows-Tool, mit dem du Sicherheitsrichtlinien
+für einen einzelnen Computer festlegen kannst, zum Beispiel Passwortanforderungen, 
+Benutzerrechte und Überwachungsrichtlinien.
+
+
+
+-- Drücke `Win + R`, gib `secpol.msc` ein und drücke `Enter`. 
+
+Das Fenster „Lokale Sicherheitsrichtlinie“ öffnet sich. Falls eine Fehlermeldung erscheint,
+kann es sein, dass du Windows Home verwendest, wo `secpol.msc` nicht verfügbar ist.  
+
+### 2. Passwort-Richtlinie anpassen 
+
+Navigiere zu **Sicherheitsoptionen → Kontorichtlinien → Kennwortrichtlinien**.  
+
+Ändere die folgenden Einstellungen:  
+- Mindestlänge des Kennworts auf 10 Zeichen setzen  
+- Kennworthistorie auf 5 vorherige Passwörter setzen  
+- Kennwort muss Komplexitätsanforderungen erfüllen aktivieren  
+
+Klicke auf Übernehmen und dann auf OK.  
+
+### 3. Benutzerrechte ändern  
+Navigiere zu **Lokale Richtlinien → Zuweisen von Benutzerrechten**.  
+
+Öffne „Anmelden als Dienst“ und füge einen neuen Benutzer hinzu.  
+Öffne „Lokale Anmeldung verweigern“ und füge einen Testbenutzer hinzu.  
+
+Bestätige die Änderungen mit Übernehmen und OK.  
+
+### 4. Auditing aktivieren  
+Navigiere zu **Lokale Richtlinien → Überwachungsrichtlinien**.  
+
+Aktiviere „Anmeldeereignisse überwachen“ für Erfolg und Fehlschlag.  
+Aktiviere „Objektzugriffsversuche überwachen“ für Erfolg und Fehlschlag.  
+
+Diese Einstellungen sorgen dafür, dass erfolgreiche und fehlgeschlagene Anmeldeversuche protokolliert werden.  
+
+### 5. Testen der Einstellungen  
+Erstelle einen neuen Benutzer im Benutzerverwaltungs-Tool mit `lusrmgr.msc`.  
+
+Versuche, ein kurzes Passwort wie „123“ zu setzen – dies sollte fehlschlagen. Setze stattdessen ein längeres Passwort.  
+
+Melde dich mit dem Testbenutzer an. Falls „Lokale Anmeldung verweigern“ aktiv ist, sollte die Anmeldung nicht möglich sein.  
+
+Öffne das Ereignisprotokoll mit `eventvwr.msc` und überprüfe unter **Windows-Protokolle → Sicherheit**, ob Anmeldeereignisse protokolliert wurden.
