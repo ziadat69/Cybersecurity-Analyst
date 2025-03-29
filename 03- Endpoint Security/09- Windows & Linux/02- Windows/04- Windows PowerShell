@@ -4,7 +4,113 @@ ffnen: Drücke Win + X und wähle „Windows PowerShell“ aus.
 
     Prozesse anzeigen: Gib den Befehl Get-Process ein und drücke Enter. 
 Dies zeigt eine Liste aller laufenden Prozesse.
+Prozess stoppen: Gib den Befehl Stop-Process -Name "prozessname" ein 
+(ersetze „prozessname“ durch einen tatsächlichen Prozess wie „notepad“).
 
-Prozess stoppen: Gib den Befehl Stop-Process -Name "prozessname" ein (ersetze „prozessname“ durch einen tatsächlichen Prozess wie „notepad“).
 
 
+
+Hier sind 
+
+### 1. **`dir`**  
+   Listet die Dateien und Ordner im aktuellen Verzeichnis auf.  
+   ```powershell
+   dir
+   ```
+
+### 2. **`ping`**  
+   Testet die Netzwerkverbindung zu einer angegebenen IP-Adresse oder Domain.
+   ```powershell
+   ping google.com
+   ```
+
+### 3. **`cd`**  
+   Wechselt das aktuelle Verzeichnis.
+   ```powershell
+   cd C:\Benutzer\Name\Dokumente
+   ```
+
+### 4. **`ip`**  
+   In PowerShell zeigt dieser Befehl Informationen zur IP-Adresse und Netzwerkschnittstellen an.  
+   ```powershell
+   ipconfig   # Windows-Befehl für IP-Informationen
+   ```
+
+### 5. **`cmdlets`**  
+   In PowerShell bezeichnet "cmdlet" eine spezielle Art von Befehl, der eine kleine Funktion ausführt. Beispiel:
+   ```powershell
+   Get-Command
+   ```
+
+### 6. **`netstat`**  
+   Zeigt Netzwerkverbindungen, Routing-Tabellen und Netzwerkstatistiken an.  
+   ```powershell
+   netstat
+   ```
+
+### 7. **`netstat -h`**  
+   Zeigt die Hilfe und Optionen für den `netstat`-Befehl an.  
+   ```powershell
+   netstat -h
+   ```
+
+### 8. **`netstat -r`**  
+   Zeigt die Routing-Tabelle an.  
+   ```powershell
+   netstat -r
+   ```
+
+### 9. **`netstat -abno`**  
+   Zeigt alle aktiven Verbindungen und zugehörige ausführbare Dateien, deren Protokolle sowie die zugehörigen Prozesse an.  
+   ```powershell
+   netstat -abno
+   ```
+
+### 10. **`clear-recyclebin`**  
+   Löscht den Inhalt des Papierkorbs in PowerShell.  
+   ```powershell
+   clear-recyclebin
+   ```
+
+### 11. **`net accounts`**  
+   Verwalten von Kontorichtlinien wie Passwortanforderungen und Sperrung von Konten.  
+   ```powershell
+   net accounts
+   ```
+
+### 12. **`net session`**  
+   Zeigt alle aktiven Sitzungen auf einem Computer an.  
+   ```powershell
+   net session
+   ```
+
+### 13. **`net share`**  
+   Zeigt freigegebene Ordner auf dem Computer an oder verwaltet sie.  
+   ```powershell
+   net share
+   ```
+
+### 14. **`net start`**  
+   Startet einen Windows-Dienst.  
+   ```powershell
+   net start "Dienstname"
+   ```
+
+### 15. **`net stop`**  
+   Stoppt einen Windows-Dienst.  
+   ```powershell
+   net stop "Dienstname"
+   ```
+
+### 16. **`net view`**  
+   Zeigt alle Computer und deren freigegebene Ressourcen im Netzwerk an.  
+   ```powershell
+   net view
+   ```
+
+### 17. **`net use`**  
+   Verbindet ein Netzlaufwerk oder trennt eine Verbindung.  
+   ```powershell
+   net use Z: \\Server\Freigabe
+   net use Z: /delete
+   ```
