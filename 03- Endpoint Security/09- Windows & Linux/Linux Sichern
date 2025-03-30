@@ -1,0 +1,48 @@
+chkrootkit
+
+chkrootkit ist ein Tool zur Erkennung von Rootkits auf einem Linux-System.
+Rootkits sind schadhafter Code, der die Kontrolle über ein System übernimmt und sich vor Entdeckung verbirgt.
+
+--> sudo chkrootkit
+
+
+
+Um nach einem speziellen Rootkit, wie z.B. einem "Wurm" (worm), zu suchen, 
+kannst du den folgenden Befehl verwenden:
+
+--> sudo chkrootkit | grep -i worm
+
+
+
+-------------------------------___________________------------------------------
+
+3.  sudo apt-get update
+
+Dieser Befehl aktualisiert die Paketquellen und holt die neuesten Informationen über verfügbare 
+Pakete und Updates. Dies ist der erste Schritt, 
+bevor du ein System mit apt-get aktualisierst oder installierst.
+
+-->> sudo apt-get update
+
+3. sudo apt-get upgrade
+
+Nachdem du mit sudo apt-get update die neuesten Paketquellen abgerufen hast, kannst du mit diesem Befehl alle installierten Pakete auf die neuesten verfügbaren Versionen aktualisieren.
+
+-->>  sudo apt-get upgrade
+chkrootkit
+sudo chkrootkit | grep -i worm
+
+
+-------------------------------___________________------------------------------
+
+Lynis ist ein Sicherheits-Audit-Tool für Unix-basierte Systeme.
+Es prüft die Sicherheitskonfiguration und stellt fest, ob das System Sicherheitslücken aufweist.
+Um Lynis zu verwenden, musst du es zuerst installieren (wenn es noch nicht installiert ist):
+
+-->>  sudo apt-get install lynis
+
+Danach kannst du einen Sicherheits-Scan durchführen:
+
+-->> sudo lynis audit system
+
+Lynis gibt eine detaillierte Ausgabe zu den gefundenen Sicherheitslücken und möglichen Verbesserungen.
