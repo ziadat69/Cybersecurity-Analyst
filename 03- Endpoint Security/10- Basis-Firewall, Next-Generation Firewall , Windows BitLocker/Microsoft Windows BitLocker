@@ -1,0 +1,9 @@
+Microsoft Windows BitLocker: Schützt Daten auf einem Laptop vor Diebstahl. Beispiel: Ein verlorener Laptop 
+mit BitLocker kann nicht ohne das richtige Passwort entschlüsselt werden, sodass Unbefugte keinen Zugriff auf die gespeicherten Daten haben.
+
+
+
+BitLocker für Laufwerk C: aktivieren:
+
+
+manage-bde -on C: -RecoveryPassword
