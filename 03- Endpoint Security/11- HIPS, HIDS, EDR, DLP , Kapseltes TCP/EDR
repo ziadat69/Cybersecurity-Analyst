@@ -1,5 +1,15 @@
-EDR: Überwacht ein Unternehmensnetzwerk und meldet verdächtige Aktivitäten auf Laptops.
+
+EDR: 
+Ein erweitertes Sicherheitskonzept, das Bedrohungen auf Endpunkten erkennt,
+analysiert und darauf reagiert. Es nutzt oft maschinelles Lernen und Verhaltensanalysen, um Angriffe frühzeitig zu identifizieren.
+
+
+
+
+Überwacht ein Unternehmensnetzwerk und meldet verdächtige Aktivitäten auf Laptops.
 Beispiel: Erkennt eine ungewöhnliche Datei, die versucht, sich automatisch auf mehreren Geräten auszuführen, und stoppt die Verbreitung.
+
+
 
 Lab: 
 
