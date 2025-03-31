@@ -1,0 +1,34 @@
+Kapseltes TCP (Encapsulated TCP): Ein Verfahren, bei dem TCP-Daten in einem anderen Protokoll 
+(z. B. IPsec oder GRE) verpackt werden, um die Kommunikation zu sichern oder durch Firewalls zu tunneln.
+
+
+Beispiel: Ein Mitarbeiter verbindet
+sich über ein VPN mit einem Firmenserver, wobei der Datenverkehr durch ein sicheres Tunnelprotokoll gekapselt wird.
+
+
+Tunnele den Zugriff auf einen entfernten Webserver (Port 80) über SSH:
+
+ssh -L 8080:targetserver.com:80 user@remoteserver.com
+
+Nun kann der Webserver unter http://localhost:8080 erreicht werden.
+
+
+
+
+
+
+Was passiert hier genau?
+
+    ssh -L 8080:targetserver.com:80 user@remoteserver.com
+
+     -L 8080:targetserver.com:80 → Leitet lokalen Port 8080 zu targetserver.com:80 über remoteserver.com weiter.
+
+     user@remoteserver.com → Baut eine SSH-Verbindung zu remoteserver.com als user auf.
+
+👉 Nutzen:
+
+Zugriff auf interne Webseiten von außen.
+
+Umgehung von Firewalls, die direkten Zugriff blockieren.
+
+Sichere Verbindung zu unsicheren Diensten.
