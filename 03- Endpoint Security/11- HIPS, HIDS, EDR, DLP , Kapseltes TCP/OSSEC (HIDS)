@@ -1,0 +1,11 @@
+OSSEC: Ein Host-basierter Intrusion Detection System (HIDS), das mit einem zentralen Manager-Server arbeitet.
+Es unterstützt Mac, Windows, Linux und Solaris als Agenten. Der Manager empfängt und analysiert Warnungen von verschiedenen 
+Netzwerkgeräten und Firewalls über Syslog. OSSEC überwacht Systemprotokolle, prüft die Dateiintegrität,
+erkennt Rootkits und Malware und kann automatisch Skripte oder Programme zur Reaktion auf erkannte Bedrohungen ausführen.
+
+
+Starte einen Testangriff (nur für Testzwecke):
+
+echo "ALERT: Possible Rootkit detected!" >> /var/log/syslog
+
+OSSEC sollte dies erkennen und eine Warnung ausgeben.
