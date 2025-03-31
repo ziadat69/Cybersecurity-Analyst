@@ -1,0 +1,11 @@
+HIPS: Ein hostbasiertes System zur Angriffserkennung und -verhinderung, 
+das direkt auf einem Endgerät läuft. Es überwacht Systemaktivitäten und kann verdächtiges Verhalten blockieren, bevor es Schaden anrichtet.
+
+Installation auf Ubuntu:
+
+wget -qO - https://updates.atomicorp.com/installers/atomic | sudo bash
+sudo apt install ossec-hids-agent
+sudo /var/ossec/bin/agent-auth -m <OSSEC-Manager-IP>
+sudo systemctl restart ossec-hids
+
+OSSEC erkennt dann Dateiänderungen oder verdächtige Aktivitäten.
