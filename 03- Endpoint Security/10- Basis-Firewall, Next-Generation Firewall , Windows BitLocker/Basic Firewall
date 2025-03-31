@@ -1,0 +1,14 @@
+Basis-Firewall (Basic Firewall): Eine grundlegende Firewall, die den Netzwerkverkehr basierend auf einfachen Regeln
+wie Quell- und Ziel-IP-Adresse, Portnummern und Protokollen filtert. 
+Sie bietet grundlegenden Schutz, ist jedoch anfällig für fortschrittlichere Angriffe.
+
+
+Lab :
+
+
+Basis-Firewall (iptables auf Linux)
+
+Blockiere eingehende Verbindungen außer SSH (Port 22):
+
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p tcp -j DROP
