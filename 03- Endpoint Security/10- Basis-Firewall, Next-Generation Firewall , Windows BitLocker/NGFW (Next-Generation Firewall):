@@ -1,0 +1,18 @@
+Eine moderne Firewall, die über herkömmliche Paketfilterung hinausgeht. 
+Sie beinhaltet Funktionen wie Deep Packet Inspection, Intrusion Prevention, Anwendungskontrolle und manchmal auch Malware-Scans.
+
+
+In FortiGate:
+
+ blockiert Social Media-Seiten.
+
+:
+
+config webfilter profile  
+edit "default"  
+set category-action 67 block  
+next  
+end
+
+
+
