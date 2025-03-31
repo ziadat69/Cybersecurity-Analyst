@@ -1,0 +1,12 @@
+DLP (Verhinderung von Datenexfiltration über USB unter Windows)
+
+Ein erweitertes Sicherheitskonzept, das Bedrohungen auf Endpunkten erkennt, analysiert und darauf reagiert.
+ Es nutzt oft maschinelles Lernen und Verhaltensanalysen, um Angriffe frühzeitig zu identifizieren.
+
+Beispiel: Ein Mitarbeiter versucht,
+eine Datei mit sensiblen Daten auf einen externen Speicher(USP) zu kopieren, aber das DLP-System blockiert den Vorgang.
+
+DLP (Verhinderung von Datenexfiltration über USB unter Windows):
+
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR" /v Start /t REG_DWORD /d 4 /f
+
