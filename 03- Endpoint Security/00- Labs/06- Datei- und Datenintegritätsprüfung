@@ -1,0 +1,148 @@
+
+
+Teil 1: Wiederherstellung von Dateien nach einem Cyberangriff
+
+Teil 2: Verwendung von Hashing zur Integritätsprüfung von Dateien
+
+Teil 3: Verwendung von HMAC zur Integritätsprüfung von Dateien
+
+Hintergrund
+
+In diesem Packet Tracer (PT)-Lab überprüfst du die Integrität mehrerer Dateien mithilfe von Hashing, 
+um sicherzustellen, dass keine Manipulationen vorgenommen wurden. Falls Dateien manipuliert wurden,
+müssen sie an den Computer von Sally gesendet werden, damit sie den Inhalt weiter analysieren kann. 
+Die IP-Adressierung, Netzwerkkonfiguration und Dienste sind bereits eingerichtet. Die Clients werden genutzt, 
+um verdächtige Dateien zu überprüfen und zu übertragen.
+
+Ressourcen
+
+CSE-LABVM ist in VirtualBox installiert.
+
+CSE-LABVM wird für die MD5-Hashprüfung der Dateien verwendet.
+
+Anweisungen
+
+Teil 1: Wiederherstellung von Dateien nach einem Cyberangriff
+
+Daten müssen vor unbefugtem Zugriff geschützt werden. 
+Durch das Hashing von Dateien vor und nach der Archivierung kann überprüft werden,
+ob Änderungen vorgenommen wurden. Hash-Werte unterscheiden sich selbst bei einer kleinen Änderung.
+
+Schritt 1: Zugriff auf den BR-Server von Mikes Computer
+
+Öffne BR-1 Laptop.
+
+Klicke auf Desktop > Webbrowser.
+
+Besuche die URL: http://branch.corp und klicke auf Go.
+
+Lade die neuesten Dateien herunter.
+
+ -----------------------------------HIER WURDE GEHACKT------------------------------------
+
+
+
+
+ -----------------------------------BACKUP SERVER UM DAS HASHS ZUERHLTEN------------------------------------
+---> Schritt 2: Kopieren der vorherigen Hash-Werte
+
+Besuche http://hq.corp.
+
+Klicke auf den Link, um die letzten Dateien und deren Hash-Werte anzuzeigen.
+
+Kopiere den gesamten Inhalt.
+
+Öffne CSE-LABVM und starte den Texteditor Pluma.
+
+Füge den Inhalt in ein neues Dokument ein und speichere es.
+
+Schritt 3: Herunterladen von Backup-Dateien auf Mikes Computer
+
+Öffne das Terminal in Packet Tracer.
+
+Verbinde dich mit dem HQ-FTP-Server mit ftp hq.corp.
+
+Melde dich mit den Zugangsdaten Username: mike, Passwort: cisco123 an.
+
+Zeige die verfügbaren Dateien mit dir an.
+
+Lade die sechs Client-Dateien herunter:
+
+ftp> get NEclients.txt
+ftp> get NWclients.txt
+ftp> get Nclients.txt
+ftp> get SEclients.txt
+ftp> get SWclients.txt
+ftp> get Sclients.txt
+
+Beende die FTP-Sitzung und überprüfe mit dir, ob die Dateien heruntergeladen wurden.
+
+
+
+ -----------------------------------VERGLEICHEN DES HASHS-----------------------------------
+Teil 2: Verwendung von Hashing zur Integritätsprüfung
+
+Die heruntergeladenen Dateien müssen auf ihre Integrität überprüft werden.
+
+Schritt 1: Berechnung der Hash-Werte
+
+Öffne CSE-LABVM und starte das Terminal.
+
+Generiere die MD5-Hashes für jede Datei mit:
+
+echo -n 'Datei-Inhalt' | md5sum
+
+Vergleiche den berechneten Hash mit den gespeicherten Werten.
+
+Notiere, ob sich Hash-Werte unterscheiden und identifiziere manipulierte Dateien.
+
+Fragen:
+
+Stimmen die Hash-Werte von NEclients.txt überein?
+
+Welche Datei wurde manipuliert?
+
+Schritt 2: Eskalation des Cyberangriffs an Sally
+
+
+ -----------------------------------DATEI WURDE GEANDERT -- EMAIL AN Sally-----------------------------------
+Erstelle eine E-Mail an sally@branch.corp, um den Sicherheitsvorfall zu melden.
+
+Schritt 3: Herunterladen der verdächtigen Datei auf Sallys Computer
+
+Verbinde dich mit ftp hq.corp auf HQ-Laptop-1.
+
+Melde dich mit Username: sally, Passwort: cisco321 an.
+
+Zeige Dateien mit dir an und lade die manipulierte Datei herunter.
+
+Beende die FTP-Sitzung und überprüfe mit dir, ob die Datei erfolgreich übertragen wurde.
+
+
+
+ -----------------------------------SICHERE DES DATEI DURCH -sha256 HASH ----------------------------------- 
+Teil 3: Verwendung von HMAC zur Integritätsprüfung
+
+HMAC bietet eine sicherere Methode zur Integritätsprüfung durch die Verwendung eines geheimen Schlüssels.
+
+Schritt 1: Berechnung von HMAC für income.txt
+
+Öffne HQ-Laptop-2.
+
+Überprüfe, ob die Datei income.txt vorhanden ist (dir).
+
+Öffne income.txt im Editor und kopiere den Inhalt.
+
+Speichere die Datei in CSE-LABVM.
+
+Berechne den HMAC mit folgendem Befehl:
+
+openssl dgst -sha256 -hmac cisco123 income.txt
+
+Fragen:
+
+Was ist der berechnete HMAC-Wert für income.txt?
+
+Warum ist HMAC sicherer als allgemeines Hashing?
+
+Stimmt der berechnete HMAC mit dem Original überein?
