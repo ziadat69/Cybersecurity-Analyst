@@ -1,0 +1,75 @@
+Der Cybersicherheitswürfel:
+
+    Die drei Hauptziele der Cybersicherheit (CIA):
+
+       -> Vertraulichkeit (Confidentiality): Verhindert, dass unbefugte Personen oder Systeme auf Daten zugreifen.
+
+       -> Integrität (Integrity): Stellt sicher, dass Daten korrekt, konsistent und zuverlässig bleiben.
+
+       -> Verfügbarkeit (Availability): Gewährleistet, dass berechtigte Benutzer jederzeit auf Daten zugreifen können, wenn sie diese benötigen.
+
+    Diese drei Prinzipien werden häufig mit der Abkürzung CIA zusammengefasst.
+
+    Datenzustände im Cybersicherheitswürfel:
+
+       -> Daten in Übertragung (Data in Transit): Daten, die von einem Ort zum anderen gesendet werden.
+
+       -> Daten im Ruhezustand (Data at Rest): Daten, die gespeichert, aber nicht aktiv genutzt werden.
+
+       -> Daten in Verarbeitung (Data in Use): Daten, die gerade bearbeitet oder verarbeitet werden.
+
+    Die drei Säulen der Cybersicherheit:
+
+       -> Technologie: Die technischen Werkzeuge und Systeme, die verwendet werden, um Daten zu schützen.
+
+       -> Richtlinien und Praktiken: Die Regeln und Verfahren, die bestimmen, wie die Technologie angewendet wird, um Sicherheitsziele zu erreichen.
+
+       ->  Bildung, Training und Bewusstsein: Schulung und Sensibilisierung der Mitarbeiter, um sicherheitsbewusstes Verhalten zu fördern.
+
+
+
+
+
+
+____________________________________________________________________________________________________
+Techniken zur Sicherstellung der Vertraulichkeit und Integrität:
+
+    Token: Eine Technik, die Daten vor dem Zugriff durch unbefugte Systeme schützt.
+
+    Rechte-Management (DRM und IRM): Systeme, die verhindern, dass Daten unbefugt genutzt oder offengelegt werden. Diese Technologien verwenden häufig Verschlüsselung.
+
+Schutz sensibler Daten:
+
+    Kategorisierung sensibler Daten: Diese werden in drei Gruppen eingeteilt:
+
+        Persönliche Daten
+
+        Geschäftliche Daten
+
+        Vertrauliche Informationen
+
+    Technologien zum Schutz der Privatsphäre: Dazu gehören Methoden wie Anonymisierung, Datenminimierung und Verschlüsselung, die helfen, Datenschutzprobleme zu lösen.
+
+Sicherstellung der Integrität:
+
+    Die Integrität von Daten bedeutet, dass sie im gesamten Lebenszyklus genau und zuverlässig bleiben.
+
+    Zu den Methoden, um die Integrität sicherzustellen, gehören:
+
+        Hashing (Erstellen einer Prüfziffer für Daten)
+
+        Datenvalidierung (Überprüfen, ob Daten korrekt sind)
+
+        Zugriffskontrollen (Nur berechtigte Benutzer können Daten ändern)
+
+Sicherstellung der Verfügbarkeit:
+
+    Die Verfügbarkeit garantiert, dass Daten zugänglich sind, wenn sie gebraucht werden.
+
+    Maßnahmen zur Sicherstellung der Verfügbarkeit:
+
+        Wartung und regelmäßige Updates der Systeme.
+
+        Backup und Notfallplanung für den Fall eines Ausfalls.
+
+        Überwachung der Systeme, um sicherzustellen, dass sie jederzeit betriebsbereit sind.
