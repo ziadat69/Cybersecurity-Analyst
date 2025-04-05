@@ -1,0 +1,112 @@
+🔐 FTP & OpenSSL Decryption Lab with Cisco Packet Tracer
+📘 Übersicht
+
+Dieses Lab simuliert eine realitätsnahe Netzwerksituation mit verschlüsseltem Datenaustausch zwischen zwei Benutzer*innen – Mary und Bob – über einen FTP-Server. Ziel ist es, verschlüsselte Zugangsdaten zu entschlüsseln, Dateien zu übertragen und anschließend zu entschlüsseln – unter Nutzung von OpenSSL und einem simulierten Netzwerk in Cisco Packet Tracer.
+🧰 Voraussetzungen
+
+    Cisco Packet Tracer
+
+    CSE-LABVM (virtuelle Maschine mit OpenSSL)
+
+    Grundkenntnisse in Linux Terminal, FTP und Dateiverschlüsselung
+
+-------------------------------Teil 1-------------------------------
+
+🧪 Lab-Abläufe
+--->>  Teil 1: FTP-Zugangsdaten von Mary entschlüsseln
+
+Schritte:
+
+    Öffne Laptop BR-1 → Desktop → Text Editor
+
+    Lade die Datei maryftplogin.txt
+
+    Kopiere den Inhalt und öffne das Terminal in CSE-LABVM
+
+Befehl zur Entschlüsselung:
+
+echo 'U2FsdGVkX1+sKwL7uceALGKqAQ78WWown3ok73zicO8GLYu2SpMvLEwCB7HsyRC3MeimUjiXRCLwOSSahAraUrnEtkClGK4tytP9hludc6k=' | 
+                                                                                                  openssl aes-256-cbc -pbkdf2 -a -d
+
+Passwort: maryftp123
+
+📥 Antwort:
+Username: mary
+Passwort: cisco123
+
+-------------------------------Teil 2 -------------------------------
+
+📤 Teil 2: Dateiübertragung mit FTP
+
+    Öffne clientinfo.enc auf Laptop BR-1
+
+    Datei ist in verschlüsseltem Format (Base64-ähnlich)
+
+    Öffne CMD → Verbinde mit Server:
+
+ftp 10.0.3.30
+
+    Verwende Marys Zugangsdaten
+
+    Lade die Datei hoch:
+
+put clientinfo.enc
+
+📥 Antwort:
+Inhalt beim Abhören des FTP-Traffics:
+Der verschlüsselte Text (ciphertext) – nicht im Klartext, aber nicht sicher ohne zusätzliche Sicherung.
+
+
+-------------------------------Teil 3 -------------------------------
+
+🔐 Teil 3: FTP-Zugangsdaten von Bob entschlüsseln
+
+Datei: bobftplogin.txt
+
+echo 'U2FsdGVkX1/+3jGTemCqs3e4dK8+b0xfXJiq4eoU0lQgRV9aZQPqJCBsYJWc9lDQwiB2svhiWSUVhCRS5qBrjgmDZF3q/dXqaCrZRR5prjE=' | openssl aes-256-cbc -pbkdf2 -a -d
+
+Passwort: bobftp123
+
+📥 Antwort:
+Username: bob
+Passwort: pa55word
+
+
+-------------------------------Teil 4 -------------------------------
+
+
+📥 Teil 4: Datei herunterladen mit FTP
+
+    Verbinde von Laptop BR-2 mit FTP-Server:
+
+ftp 10.0.3.30
+
+    Verwende Bobs Zugangsdaten
+
+    Lade Datei herunter:
+
+get clientinfo.enc
+
+📥 Antwort:
+Inhalt bei Angriff während Übertragung:
+Ciphertext – kein Klartext, aber nicht vollständig geschützt ohne TLS/SSL
+
+
+-------------------------------Teil 5 -------------------------------
+
+🧩 Teil 5: Entschlüsseln der sensiblen Daten
+
+    Öffne Bobs E-Mail → Entschlüsselungsschlüssel (Beispiel: securekey123)
+
+    Füge Inhalt von clientinfo.enc in Datei auf CSE-LABVM ein:
+
+pluma clientinfo.enc
+
+    Entschlüssle die Datei:
+
+openssl aes-256-cbc -pbkdf2 -a -d -in clientinfo.enc -out clientinfo.txt
+
+Passwort: (aus der E-Mail)
+
+📥 Antwort:
+Erster Vorname in der Datei: z. B. John
