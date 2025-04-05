@@ -1,0 +1,48 @@
+Schutz von Daten in allen drei Zuständen (Daten im Ruhezustand, Daten in Übertragung und Daten in Bearbeitung)
+
+Der Schutz von Informationen erfordert Maßnahmen für alle drei Zustände von Daten: Daten im Ruhezustand, Daten in Übertragung und Daten in Bearbeitung.
+
+   -----> Daten im Ruhezustand (Data at Rest):
+
+Daten im Ruhezustand sind Daten, die weder von Benutzern oder Prozessen abgerufen noch angefordert oder geändert werden. 
+Sie sind gespeichert in Geräten wie DAS (Direct Attached Storage), RAID (Redundant Array of Independent Disks), NAS (Network Attached Storage), SAN (Storage Area Network) 
+oder in der Cloud.
+
+Diese Daten sind anfällig für schadhafte Angriffe auf den lokalen Host, besonders bei direkt angeschlossenen Speichersystemen. Backup-Daten zählen ebenfalls zu den Daten im Ruhezustand, insbesondere wenn sie nicht gerade geschrieben oder übertragen werden. Backups können manuell oder automatisch erfolgen.
+
+Netzwerkspeichersysteme wie RAID, SAN und NAS bieten bessere Leistung und Redundanz, was jedoch das Risiko bei einem Gerätedefekt für die Organisation erhöht. Die Herausforderungen bei Netzwerkspeichersystemen umfassen die Konfiguration, das Testen und die Überwachung.
+
+  ----->  Daten in Übertragung (Data in Transit):
+
+Daten in Übertragung sind Daten, die aktiv gesendet werden – sie sind weder im Ruhezustand noch in Bearbeitung. 
+Sie werden von einem Computer zum anderen übertragen, etwa über kabelgebundene Netzwerke wie Kupferkabel und Glasfaser, 
+aber auch über drahtlose Netzwerke.
+
+Protokolle wie IP (Internet Protocol) und HTTP (HyperText Transfer Protocol) definieren die Struktur und die Bildung von Datenpaketen, 
+die über Netzwerke gesendet werden. Hacker könnten diese Daten während der Übertragung abfangen und stehlen.
+
+VPNs (Virtual Private Networks) und Verschlüsselungsmethoden wie SSL und IPsec werden von Cybersicherheitsexperten eingesetzt, 
+um Daten zu schützen, indem sie diese während der Übertragung verschlüsseln und die Integrität sicherstellen.
+
+Hacker können auch versuchen, Daten während der Übertragung zu ändern. Daher sind Systeme zur Datenintegrität erforderlich, 
+um sicherzustellen, dass die übermittelten Daten authentisch und unverändert sind. Dies kann durch Hashing, 
+Datenwiederholungen und Datenvalidierungssysteme erfolgen.
+
+  -----> Daten in Bearbeitung (Data in Process):
+
+Daten in Bearbeitung beziehen sich auf Daten, die gerade verarbeitet, eingegeben, modifiziert oder berechnet werden. 
+Zu diesem Zeitpunkt sind sie anfällig für verschiedene Angriffe und Fehler.
+
+Der Schutz von Daten beginnt bereits beim Initialeingabeschritt, wenn die Daten erfasst werden, sei es durch manuelle Eingabe, 
+das Scannen von Formularen oder das Hochladen von Dateien. Jede dieser Methoden stellt ein potenzielles Risiko für die Integrität der Daten dar.
+
+Fehler während des Eingabeprozesses können zu Datenbeschädigungen führen, z. B. durch falsche Etikettierungen, 
+nicht übereinstimmende oder ungültige Datenformate oder fehlerhafte Daten, die von defekten oder unzuverlässigen Sensoren stammen.
+
+Beschädigte Daten entstehen, wenn die Daten auf eine Weise geändert werden, dass sie nicht mehr lesbar oder verwendbar sind, 
+etwa durch falsche Datenbezeichner oder fehlerhafte Konfigurationen bei der Datenverarbeitung.
+
+Der Schutz der Datenintegrität in all diesen Zuständen erfordert umfassende Sicherheitsmaßnahmen,
+von der Verschlüsselung über die Authentifizierung bis hin zu speziellen Systemen, die Fehler im Datenverarbeitungsprozess erkennen und verhindern.
+
+
